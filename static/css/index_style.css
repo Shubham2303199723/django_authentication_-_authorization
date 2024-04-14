@@ -1,0 +1,92 @@
+*{
+    background-color: #DFE0E2;
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    width: max-content;
+    background-color: #75ABBC;
+    box-shadow: 2px 4px 5px;
+    height: 500px;
+    width: 600px;
+}
+.div-welcome{
+    display: flex;
+    justify-content: center;
+    background-color: #75ABBC;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: #071013;
+    text-shadow: 2px 2px 5px rgb(119, 112, 112);
+    text-decoration: underline;
+}
+.div-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: #75ABBC;
+}
+.div-login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: #75ABBC;
+}
+.div-login form label{
+    background-color: #75ABBC;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: #0d233a;
+}
+.div-login form input{
+    background-color: #DFE0E2;
+    font-weight: bolder;
+    width: 250px;
+    border-radius: 5px;
+    border-style: none;
+    height: 30px;
+}
+.div-login-btn{
+    background-color: #071013;
+    color: #DFE0E2;
+    font-weight: bolder;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border-style: none;
+}
+.div-login-btn:hover{
+    background-color: #DFE0E2;
+    transition: 0.5s;
+    color: black;
+    border-color: white;
+}
+.div-anchor{
+    height: 26px;
+}
+div a{
+    background-color: #75ABBC;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 25px;
+    text-decoration: underline;
+}
+div a:hover{
+    transition: 0.2s;
+    color: rgba(255, 255, 255, 0.76);
+
+}

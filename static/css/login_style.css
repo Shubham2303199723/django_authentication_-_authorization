@@ -1,0 +1,86 @@
+*{
+    background-color: #DFE0E2;
+}
+.div-main{
+    display: flex;
+    justify-content: center;
+}
+.div-inner{
+    background-color: #75ABBC;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    box-shadow: 2px 4px 5px;
+}
+.div-form-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+    background-color: #75ABBC;
+}
+.div-create{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgb(119, 112, 112);
+    text-decoration: underline;
+    background-color: #75ABBC;
+}
+.div-login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: #75ABBC;
+}
+.div-login form label{
+    background-color: #75ABBC;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: #0d233a;
+}
+.div-login form input{
+    background-color: #DFE0E2;
+    font-weight: bolder;
+    width: 250px;
+    border-radius: 5px;
+    border-style: none;
+    height: 25px;
+}
+.div-login-btn{
+    background-color: #071013;
+    color: #DFE0E2;
+    font-weight: bolder;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border-style: none;
+}
+.div-login-btn:hover{
+    background-color: #DFE0E2;
+    transition: 0.5s;
+    color: black;
+    border-color: white;
+}
+.div-anchor{
+    height: 25px;
+}
+div a{
+    background-color: #75ABBC;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 25px;
+    text-decoration: underline;
+}
+div a:hover{
+    transition: 0.2s;
+    color: rgba(255, 255, 255, 0.76);
+
+}
