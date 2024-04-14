@@ -3,10 +3,10 @@ from django.shortcuts import render
 
 
 def login(request):
-    return render (request, 'index.html')
+    return render(request, 'index.html')
 
 def register(request):
-    pass
+    return render(request, 'Sign_up.html')
 
 def logout(request):
     pass
