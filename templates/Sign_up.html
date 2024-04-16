@@ -13,7 +13,8 @@
             <div class="div-form-main">
                 <div class="div-create">Create You Sign Up Here!</div>
                 <div class="div-login">
-                    <form action="">
+                    <form action="" method="post">
+                        {% csrf_token%}
                         <label for="">Full Name</label>
                         <input type="text" placeholder="Enter Your Full Name"> <br>
                         <label for="">Email ID</label>
