@@ -15,11 +15,20 @@ def signup(request):
         phone_no = request.POST.get('phone_no')
         dob = request.POST.get('dob')
         form = Userform(name=name, email=email, password=password, city=city, phone_no=phone_no, dob=dob)
-        form.save()
-        return HttpResponseRedirect('/signin')
+        if form.is_valid():
+            form.save()
+        return HttpResponseRedirect('signin')
     return render(request, 'Sign_up.html')
 
 def signin(request):
+    if request.method == "POST":
+        name = request.session.get('name')
+        password = request.session.get('password')
+        form = Userform(name=name, password=password)
+        if form.is_valid():
+            user = form.get_user()
+            return HttpResponseRedirect('signin', user)
+
     return render(request, 'Sign_in.html')
 
 def dashboard(request):

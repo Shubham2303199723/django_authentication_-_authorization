@@ -12,11 +12,12 @@
         <div class="div2">
             <div class="div-welcome">Welcome To Sign In | Sign Up Form</div>
             <div class="div-login">
-                <form action="">
+                <form action="{% url 'signin' %}" method="POST">
+                    {% csrf_token %}
                     <label for="">Email</label>
-                    <input type="text" placeholder="Enter Your Email"> <br>
+                    <input type="text" placeholder="Enter Your Email" name="email"> <br>
                     <label for="">Password</label>
-                    <input type="password" placeholder="Enter You Password"> <br>
+                    <input type="password" placeholder="Enter You Password" name="password"> <br>
                     <button class="div-login-btn" type="submit">Sign In</button>
                 </form>
             </div>
