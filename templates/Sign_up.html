@@ -13,20 +13,20 @@
             <div class="div-form-main">
                 <div class="div-create">Create You Sign Up Here!</div>
                 <div class="div-login">
-                    <form action="" method="post">
+                    <form action="{% url 'signup' %}" method="post">
                         {% csrf_token%}
                         <label for="">Full Name</label>
-                        <input type="text" placeholder="Enter Your Full Name"> <br>
+                        <input type="text" placeholder="Enter Your Full Name" name="full_name"> <br>
                         <label for="">Email ID</label>
-                        <input type="email" placeholder="Enter Your Email"><br>
+                        <input type="email" placeholder="Enter Your Email" name="email"><br>
                         <label for="">Password</label>
-                        <input type="password" placeholder="Enter Your Password"><br>
+                        <input type="password" placeholder="Enter Your Password" name="password"><br>
                         <label for="">City</label>
-                        <input type="text" placeholder="Enter Your City"><br>
+                        <input type="text" placeholder="Enter Your City" name="city"><br>
                         <label for="">Phone No.</label>
-                        <input type="tel" placeholder="Enter Your Number"><br>
+                        <input type="tel" placeholder="Enter Your Number" name="phone_no"><br>
                         <label for="">DOB</label>
-                        <input type="date"><br>
+                        <input type="date" name="dob"><br>
                         <button class="div-login-btn" type="submit">Submit</button>
                     </form>
                 </div>
