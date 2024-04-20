@@ -25,11 +25,10 @@ def signin(request):
         name = request.session.get('name')
         password = request.session.get('password')
         form = Userform(name=name, password=password)
-        if form.is_valid():
-            user = form.get_user()
-            return HttpResponseRedirect('signin', user)
-
+        return HttpResponseRedirect('/home/')
     return render(request, 'Sign_in.html')
+
+
 
 def dashboard(request):
     pass
