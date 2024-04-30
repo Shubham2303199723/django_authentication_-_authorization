@@ -21,43 +21,20 @@ def signup(request):
         return HttpResponseRedirect('/signup/')
     return render(request, 'Sign_up.html')
 
-# def signin(request):
-#     if request.method == 'POST':
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-#         print(username, password)
-#         user1 = authenticate(request, username=username, password=password)
-#         print(user1)
-#         if user1 is not None:
-#             login(request, user1)
-#             return HttpResponse('You Logged In')
-#         else:
-#             return HttpResponse('User is invalid')
-#     return render(request, 'Sign_in.html')
+def signin(request):
+    if request.method == 'POST':
+        username = request.POST.get('email')
+        password1 = request.POST.get('password')
+        user1 = authenticate(request, email=username, password=password1)
+        if user1 is not None:
+            login(request, user1)
+            return HttpResponse('You Logged In')
+        else:
+            return HttpResponse('User is invalid')
+    return render(request, 'Sign_in.html')
 
 def dashboard(request):
     pass
 
 def logout(request):
     pass
-
-
-def signin(request):
-    if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-
-        try:
-            user = Userform.objects.get(email=email)
-            if user.check_password(password):
-                # Authentication successful
-                request.session['user_id'] = user.id
-                return redirect('dashboard')
-            else:
-                # Invalid password
-                messages.error(request, 'Invalid email or password')
-        except Userform.DoesNotExist:
-            # User does not exist
-            messages.error(request, 'Invalid email or password')
-
-    return render(request, 'Sign_in.html')
