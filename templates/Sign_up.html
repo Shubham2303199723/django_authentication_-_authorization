@@ -15,8 +15,8 @@
                 <div class="div-login">
                     <form action="{% url 'signup' %}" method="post">
                         {% csrf_token%}
-                        <label for="">Full Name</label>
-                        <input type="text" placeholder="Enter Your Full Name" name="full_name"> <br>
+                        <label for="">UserName</label>
+                        <input type="text" placeholder="Enter Your Full Name" name="username"> <br>
                         <label for="">Email ID</label>
                         <input type="email" placeholder="Enter Your Email" name="email"><br>
                         <label for="">Password</label>
